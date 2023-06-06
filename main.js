@@ -35,7 +35,7 @@ const typeNextCharacter = () => {
         if (wordIndex < sentence.length - 1) {
             wordIndex++;
             charIndex = 0;
-            setTimeout(typeNextCharacter, 1000); // Delay before starting next word
+            setTimeout(typeNextCharacter, 150); // Delay before starting next word
         }
     }
 };
