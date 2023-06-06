@@ -13,6 +13,15 @@ body {
     text-align: center;
 }
 
+.font0,
+.font1,
+.font2,
+.font3,
+.font4 {
+    font-size: 24px;
+}
+
+
 .font0 {
     font-family: Arial, sans-serif;
 }
@@ -39,6 +48,7 @@ body {
 
 .cursor {
     margin-left: 2px;
+    font-size: 24px;
     animation: blink 1s infinite;
 }
 
