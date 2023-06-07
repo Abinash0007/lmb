@@ -8,16 +8,24 @@ let charIndex = 0;
 const cursor = document.createElement('span');
 cursor.classList.add('cursor');
 cursor.textContent = '|';
+
+displayArea.innerHTML = ''; // Clear existing content
 displayArea.appendChild(cursor);
+
+const getRandomFontClass = () => {
+    const fontClasses = ['font0', 'font1', 'font2', 'font3', 'font4'];
+    const randomIndex = Math.floor(Math.random() * fontClasses.length);
+    return fontClasses[randomIndex];
+};
 
 const typeNextCharacter = () => {
     let word = sentence[wordIndex];
 
     let span = document.createElement("span");
-    span.classList.add(`font${wordIndex % 5}`);
+    span.classList.add(getRandomFontClass());
 
-    if (word[charIndex] === '<' || word[charIndex] === '3') {
-        span.classList.add('specialChar');
+    if (charIndex === 0) {
+        span.classList.add('firstLetter'); // Add a class to the first letter of each word
     }
 
     span.textContent = word[charIndex];
@@ -29,7 +37,7 @@ const typeNextCharacter = () => {
         setTimeout(typeNextCharacter, 100 + Math.random() * 200); // Random delay to simulate human typing
     } else {
         let space = document.createElement('span');
-//         space.textContent = ' ';
+        space.textContent = ' ';
         displayArea.insertBefore(space, cursor);
 
         if (wordIndex < sentence.length - 1) {
