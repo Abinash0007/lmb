@@ -9,10 +9,8 @@ body {
     justify-content: center;
 }
 
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Update alignment to flex-start */
+.display-area {
+    text-align: top;
     margin-top: 10px; /* Adjust the margin-top value as desired */
 }
 
@@ -23,7 +21,6 @@ body {
 .font4 {
     font-size: 24px;
 }
-
 
 .font0 {
     font-family: Arial, sans-serif;
@@ -57,4 +54,8 @@ body {
 
 @keyframes blink {
     50% { opacity: 0; }
+}
+
+.firstLetter {
+    color: pink;
 }
