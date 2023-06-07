@@ -29,7 +29,7 @@ const typeNextCharacter = () => {
         setTimeout(typeNextCharacter, 100 + Math.random() * 200); // Random delay to simulate human typing
     } else {
         let space = document.createElement('span');
-        space.textContent = ' ';
+//         space.textContent = ' ';
         displayArea.insertBefore(space, cursor);
 
         if (wordIndex < sentence.length - 1) {
