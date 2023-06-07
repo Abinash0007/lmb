@@ -10,7 +10,10 @@ body {
 }
 
 .center {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Update alignment to flex-start */
+    margin-top: 10px; /* Adjust the margin-top value as desired */
 }
 
 .font0,
